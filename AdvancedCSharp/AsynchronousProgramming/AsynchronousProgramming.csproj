@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventArgs\CalculatePrimeCompletedEventArgs.cs" />
+    <Compile Include="EventArgs\CalculatePrimeProgressChangedEventArgs.cs" />
+    <Compile Include="PrimeNumberCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
