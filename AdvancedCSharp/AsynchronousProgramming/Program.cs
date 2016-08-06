@@ -1,37 +1,39 @@
-﻿using AsynchronousProgramming.EventArgs;
+﻿using AsynchronousProgramming.Modern;
 using System;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace AsynchronousProgramming
 {
     class Program
     {
-        public static bool isFinished = false;
-
         static void Main(string[] args)
         {
-            var primeNumberCalculator = new PrimeNumberCalculator();
-            primeNumberCalculator.CalculatePrimeCompleted += PrimeNumberCalculator_CalculatePrimeCompleted;
-            primeNumberCalculator.ProgressChanged += PrimeNumberCalculator_ProgressChanged;
-
-            primeNumberCalculator.CalculatePrimeAsync(1234567, Guid.NewGuid());
-
-            // thread synchronization
-            while (isFinished == false);
-
-            Console.WriteLine("Main finished !!");
+            ModernExample()
+                .Wait();
         }
 
-        private static void PrimeNumberCalculator_ProgressChanged(System.ComponentModel.ProgressChangedEventArgs e)
+        #region Modern async operations
+
+        const string FILE = "./index.html";
+        const string WEB_PAGE = "http://laurentiu.microsoft.pub.ro/";
+        
+        static async Task ModernExample()
         {
-            
+            await BasicModernExamples();
+            await TaskVsVoid.TryAsyncOperations();
         }
 
-        private static void PrimeNumberCalculator_CalculatePrimeCompleted(object sender, CalculatePrimeCompletedEventArgs e)
+        static async Task BasicModernExamples()
         {
-            Console.WriteLine(e.IsPrime);
+            var blogData = await WebClient.GetHtml(new Uri(WEB_PAGE));
 
-            isFinished = true;
+            await FileIO.WriteToFileAsync(FILE, blogData);
+
+            var fileData = await FileIO.ReadFromFileAsync(FILE);
+
+            Console.WriteLine(fileData);
         }
+
+        #endregion
     }
 }
