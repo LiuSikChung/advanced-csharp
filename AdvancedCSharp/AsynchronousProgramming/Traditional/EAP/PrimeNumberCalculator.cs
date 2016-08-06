@@ -1,11 +1,11 @@
-﻿using AsynchronousProgramming.EventArgs;
+﻿using AsynchronousProgramming.Traditional.EventArgs;
 using System;
 using System.Collections;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Threading;
 
-namespace AsynchronousProgramming
+namespace AsynchronousProgramming.Traditional
 {
     public class PrimeNumberCalculator
     {
@@ -23,7 +23,6 @@ namespace AsynchronousProgramming
         #region Public events
 
         public delegate void ProgressChangedEventHandler(ProgressChangedEventArgs e);
-
         public delegate void CalculatePrimeCompletedEventHandler(object sender, CalculatePrimeCompletedEventArgs e);
 
         public event ProgressChangedEventHandler ProgressChanged;

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace AsynchronousProgramming.EventArgs
+namespace AsynchronousProgramming.Traditional.EventArgs
 {
     public class CalculatePrimeProgressChangedEventArgs : ProgressChangedEventArgs
     {
