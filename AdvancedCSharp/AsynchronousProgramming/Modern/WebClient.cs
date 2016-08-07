@@ -6,7 +6,7 @@ namespace AsynchronousProgramming.Modern
 {
     public class WebClient
     {
-        public static async Task<string> GetHtml(Uri webPage)
+        public async Task<string> GetHtmlAsync(Uri webPage)
         {
             using (var client = new HttpClient())
             {

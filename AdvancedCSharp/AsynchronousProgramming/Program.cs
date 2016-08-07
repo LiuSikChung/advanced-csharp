@@ -25,11 +25,14 @@ namespace AsynchronousProgramming
 
         static async Task BasicModernExamples()
         {
-            var blogData = await WebClient.GetHtml(new Uri(WEB_PAGE));
+            var webClient = new WebClient();
+            var fileIO = new FileIO();
 
-            await FileIO.WriteToFileAsync(FILE, blogData);
+            var blogData = await webClient.GetHtmlAsync(new Uri(WEB_PAGE));
 
-            var fileData = await FileIO.ReadFromFileAsync(FILE);
+            await fileIO.WriteToFileAsync(FILE, blogData);
+
+            var fileData = await fileIO.ReadFromFileAsync(FILE);
 
             Console.WriteLine(fileData);
         }
