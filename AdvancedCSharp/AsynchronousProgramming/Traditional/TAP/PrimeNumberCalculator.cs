@@ -1,17 +1,18 @@
-﻿using AsynchronousProgramming.Traditional.EventArgs;
-using System;
+﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AsynchronousProgramming.Modern
 {
     public class PrimeNumberCalculator
     {
-        private volatile int LastPrimeNumber = 100;
+        private bool displayProgress = false;
+        private volatile int lastPrimeNumber = -1;
+
+        public PrimeNumberCalculator(bool displayProgress)
+        {
+            this.displayProgress = displayProgress;
+        }
 
         public Task<bool> CalculatePrimeAsync(int numberToTest)
         {
@@ -66,9 +67,13 @@ namespace AsynchronousProgramming.Modern
                 {
                     var progressPercentage = (int)((float)n / (float)numberToTest * 100);
 
-                    //LastPrimeNumber = n;
+                    lastPrimeNumber = n;
 
-                    Console.WriteLine("Progress: {0}%", progressPercentage);
+                    if (displayProgress)
+                    {
+                        Console.WriteLine("[TAP] Progress: {0}%", progressPercentage);
+                        Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    }
 
                     primes.Add(n);
                 }

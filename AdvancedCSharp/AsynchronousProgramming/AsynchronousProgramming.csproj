@@ -48,6 +48,10 @@
     <Compile Include="Modern\WebClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traditional\EAP\EventArgs\CalculatePrimeCompletedEventArgs.cs" />
+    <Compile Include="Traditional\EAP\EventArgs\CalculatePrimeProgressChangedEventArgs.cs" />
+    <Compile Include="Traditional\EAP\PrimeNumberCalculator.cs" />
+    <Compile Include="Traditional\TAP\PrimeNumberCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
