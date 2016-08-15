@@ -12,11 +12,11 @@ There's a very fine line between asynchronous and parallel programming. They may
 
 ## Traditional async operations
 
-If you are a C# geek (just like me :sunglasses:) or have had programmed with C# or in the .NET environment, you can check <del>this blog post</del> (coming soon 😎) in which I talk about the [Event-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/ms228969(v=vs.110).aspx) (EAP) and how you can rewrite it using the [Task-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/hh873175(v=vs.110).aspx) (TAP).
+If you are a C# geek (just like me :sunglasses:) or have had programmed with C# or in the .NET environment, you can check [this blog post](https://laurentiu.microsoft.pub.ro/2016/08/14/from-eap-to-tap-in-csharp/) in which I talk about the [Event-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/ms228969(v=vs.110).aspx) (EAP) and how you can rewrite it using the [Task-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/hh873175(v=vs.110).aspx) (TAP).
 
 ## Modern async operations
 
-As of C# 4.0, you can write asynchronous code using the [Task-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/hh873175(v=vs.110).aspx) (TAP) which provides a more easy to implement and to debug code. If you want to learn more about the improvements the TAP did, you can check <del>this blog post</del> (coming soon 😎) in which I compare the the [Task-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/hh873175(v=vs.110).aspx) (TAP) and the [Asynchronous Programming Model](https://msdn.microsoft.com/ro-ro/library/ms228963(v=vs.110).aspx) (APM).
+As of C# 4.0, you can write asynchronous code using the [Task-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/hh873175(v=vs.110).aspx) (TAP) which provides a more easy to implement and to debug code. If you want to learn more about the improvements the TAP did, you can check [this blog post](https://laurentiu.microsoft.pub.ro/2016/08/14/from-eap-to-tap-in-csharp/) in which I compare the the [Task-based Asynchronous Pattern](https://msdn.microsoft.com/en-us/library/hh873175(v=vs.110).aspx) (TAP) and the [Asynchronous Programming Model](https://msdn.microsoft.com/ro-ro/library/ms228963(v=vs.110).aspx) (APM).
 
 ## Understanding async/await keywords
 
